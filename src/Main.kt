@@ -31,8 +31,15 @@ fun main() {
         j3.changerArme("Arc")
         println("${j3.nom} est équipé de l'arme : ${j3.armeEquipee}")
         j3.afficherInventaire()
-
-
     }
-    etape2()
+    fun etape3() {
+        j2.ajouterArme(arme3)
+        j2.changerArme("Hache")
+        j3.ajouterArme(arme2)
+        j3.changerArme("Arc")
+
+        val c1: Combat = Combat(j2, j3)
+        c1.lancer()
+    }
+    etape3()
 }

@@ -8,7 +8,9 @@ class Joueur(val nom: String, var vie: Int, var armeEquipee: Arme, inventaire: M
     }
 
     fun attaquer(): Int {return this.armeEquipee.degat}
-    fun recevoirDegats(degat: Int): Unit {if (this.vie>0) this.vie-=degat}
+    fun recevoirDegats(degat: Int): Unit {
+        vie = this.vie-degat
+        if (vie>0) this.vie=vie else this.vie=0}
     fun ajouterArme(arme: Arme): Unit {this.inventaire.add(arme)}
     fun changerArme(nomArme: String): Unit {
         val arme = this.inventaire.find {it.nom.lowercase() == nomArme.lowercase()}
