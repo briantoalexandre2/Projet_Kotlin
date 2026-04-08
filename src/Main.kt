@@ -1,12 +1,18 @@
-val arme1: Arme = Arme("épée", 15)
+// Partie 1
+val arme1: Arme = Arme("épée", -15)
 val arme2: Arme = Arme("Arc", 12)
 val arme3: Arme = Arme("Hache", 20)
 
-val j1: Joueur = Joueur("alex", 20, mutableListOf(arme2, arme1)) /*Test*/
+val j1: Joueur = Joueur("alex", 20, mutableListOf(arme2, arme1, arme1)) /*Test*/
 val j2: Joueur = Joueur("Arthur", 50, arme1)
 val j3: Joueur = Joueur("Lancelot", 50, mutableListOf())
+// partie 2
+
+val p1: Personnage = Personnage("Perceval", 100, 15)
+val p2: Personnage = Personnage("Mordred", 80, 20)
 
 fun main() {
+//    Partie I
     fun etape1() {
         println(arme1)
         println(arme2)
@@ -41,5 +47,17 @@ fun main() {
         val c1: Combat = Combat(j2, j3)
         c1.lancer()
     }
-    etape3()
+    fun etape4() { /*test*/
+        j1.changerArme("épée")
+        println(j1)
+    }
+//    Partie 2
+
+    fun etape5() {
+        p1.afficherEtat()
+        p2.afficherEtat()
+        p2.attaquer(p1)
+    }
+    etape5()
+
 }
