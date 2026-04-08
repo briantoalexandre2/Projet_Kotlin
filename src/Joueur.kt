@@ -1,6 +1,4 @@
-
-
-class Joueur(val nom: String, vie: Int, var armeEquipee: Arme, inventaire: MutableList<Arme> = mutableListOf(Arme("Poing", 5))) {
+open class Joueur(val nom: String, vie: Int, var armeEquipee: Arme, inventaire: MutableList<Arme> = mutableListOf(Arme("Poing", 5))) {
     var vie: Int = vie
         get() {if (field<0) return 0 else return field}
     var inventaire = inventaire

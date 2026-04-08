@@ -8,8 +8,6 @@ val j2: Joueur = Joueur("Arthur", 50, arme1)
 val j3: Joueur = Joueur("Lancelot", 50, mutableListOf())
 // partie 2
 
-val p1: Personnage = Personnage("Perceval", 100, 15)
-val p2: Personnage = Personnage("Mordred", 80, 20)
 
 fun main() {
 //    Partie I
@@ -54,10 +52,10 @@ fun main() {
 //    Partie 2
 
     fun etape5() {
-        p1.afficherEtat()
-        p2.afficherEtat()
-        p2.attaquer(p1)
+
     }
-    etape5()
+    fun etape6() { // héritage
+
+    }
 
 }
