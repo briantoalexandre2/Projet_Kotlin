@@ -1,7 +1,5 @@
-import Personnage
-
 class Guerrier(nom: String, vie: Int, var armure: Int, armeEquipee: Arme, inventaire: MutableList<Arme> = mutableListOf(Arme("Poing", 5))): Personnage(nom, vie, armeEquipee, inventaire) {
-    constructor(nom: String, vie: Int, armure: Int, inventaire: MutableList<Arme> ): this(nom, vie, armure, armeEquipee = Arme("Poing", 5), inventaire) {
+    constructor(nom: String, vie: Int, armure: Int, inventaire: MutableList<Arme> = mutableListOf() ): this(nom, vie, armure, armeEquipee = Arme("Poing", 5), inventaire) {
     }
 
     override fun recevoirDegats(degat: Int) {

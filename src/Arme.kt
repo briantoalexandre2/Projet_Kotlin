@@ -12,7 +12,6 @@ class Arme(val nom: String, degat: Int) {
         get() {if (field<0) return 1 else return field}
 
 
-
     override fun toString(): String {
         return "($nom, $degat)"
     }
