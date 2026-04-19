@@ -1,8 +1,8 @@
-val arme1: Arme = Arme("épée", 50)
-val arme4: Arme = Arme("Baton", 45)
+val arme1: Epee = Epee()
+val arme2: Baton = Baton()
 
-val g1: Guerrier = Guerrier("Arthur")
-val m1: Mage = Mage("Merlin")
+val g1: Guerrier = Guerrier("Arthur", 150, 5, arme1)
+val m1: Mage = Mage("Merlin", 150, 20, arme2)
 
 val combat1: Combat = Combat(g1, m1)
 

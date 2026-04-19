@@ -1,14 +1,14 @@
+val a: Int = 5
 class Mage(nom: String, vie: Int, var mana: Int, armeEquipee: Arme, inventaire: MutableList<Arme> = mutableListOf(Arme("Poing", 5))): Personnage(nom, vie, armeEquipee, inventaire) {
     constructor(nom: String, vie: Int, mana: Int, inventaire: MutableList<Arme> = mutableListOf()): this(nom, vie, mana, armeEquipee = Arme("Poing", 5), inventaire) {
     }
-    constructor(nom: String): this(nom, 100, 20, Arme("Baton", 20))
+    constructor(nom: String): this(nom, 100, 20, Baton())
 
     private fun lancerSort() {
         this.mana -= 10
     }
 
     override fun attaquer(): Int {
-        this.lancerSort()
         if (this.mana>=10) {
             return this.armeEquipee.degat*2
         } else {

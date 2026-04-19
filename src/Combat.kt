@@ -15,7 +15,7 @@ class Combat(private val personnage1: Personnage, private val personnage2: Perso
         }
     }
     private fun afficherVainqueur() {
-        println("Fin du combat ! ")
+        println("\nFin du combat ! ")
         if (this.personnage1.vie == 0) {
             println("${this.personnage2.nom} a gagné !")
         } else if (this.personnage2.vie == 0) {
@@ -26,9 +26,9 @@ class Combat(private val personnage1: Personnage, private val personnage2: Perso
     }
 
     fun lancer() {
-        var tour: UByte = 1U
+        var tour: Byte = 1
         println("Début du combat entre ${this.personnage1.nom} et ${this.personnage2.nom} !")
-        while (tour<3U) {
+        while (tour<4) {
             println("\n--- Tour $tour ---")
             this.jouerTour(this.personnage1, this.personnage2)
             if (this.personnage2.vie == 0) break

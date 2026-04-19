@@ -1,4 +1,4 @@
-class Arme(val nom: String, degat: Int) {
+open class Arme(val nom: String, degat: Int) {
     var degat: Int = degat
         set(value) {
             if (value>0) {
